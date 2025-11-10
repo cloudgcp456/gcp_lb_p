@@ -1,0 +1,20 @@
+gsutil is a Python application that lets you access Cloud Storage from the command line. You can use gsutil to do a wide range of bucket and object management tasks, including:
+
+    - Creating and deleting buckets.
+    
+    gcloud storage buckets create gs://first-bucket-lb gs://second-bucket-lb
+    
+    gcloud storage rm --recursive gs://first-bucket-lb
+    
+    PS C:\NOVGCP\gcp_lb_p_clean> gcloud storage rm --recursive gs://first-bucket-lb
+        Removing objects:
+        -Removing gs://first-bucket-lb/README.md#1762788778107901...
+        Completed 1/1
+        Removing buckets:
+        \Removing gs://first-bucket-lb/...
+        Completed 1/1
+        PS C:\NOVGCP\gcp_lb_p_clean> 
+    
+    - Uploading, downloading, and deleting objects.
+    
+    gcloud storage cp README.MD gs://first-bucket-lb

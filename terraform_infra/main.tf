@@ -41,3 +41,13 @@ resource "google_storage_bucket" "static2" {
 
  uniform_bucket_level_access = true
 }
+
+# Create a text object in Cloud Storage
+resource "google_storage_bucket_object" "default" {
+  name = "new-object"
+  # Use `source` or `content`
+  source       = "C:\\NOVGCP\\gcp_lb_p_clean\\CLI\\GCS\\gcloud_storage_commands.txt"
+  # content      = "Data as string to be uploaded"
+  # content_type = "text/plain"
+  bucket       = google_storage_bucket.static.id
+}
